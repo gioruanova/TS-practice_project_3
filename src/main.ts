@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const $todoForm = document.querySelector<HTMLFormElement>("#todo-form")!;
   const $todoInput = document.querySelector<HTMLInputElement>("#todo-input")!;
   const $todoList = document.querySelector<HTMLUListElement>("#todo-list")!;
-  // const $todoItemTemplate = document.querySelector<HTMLTemplateElement>("#todo-item-template")!;
 
   if (!$todoForm || !$todoInput || !$todoList) {
     console.error('Elements not ready');

@@ -29,6 +29,58 @@
                 </div>
               </form>
 
+              <!-- task statistics -->
+              <div id="task-stats-container">
+                <!-- Empty state message -->
+                <div id="empty-state" class="alert alert-info text-center mb-3 d-none">
+                  <i class="bi bi-info-circle me-2"></i>No tasks created yet
+                </div>
+
+                <!-- Progress section -->
+                <div id="progress-section" class="mb-3 d-none">
+                  <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center mb-1">
+                    <span id="motivation-message" class="text-muted small mb-2 mb-sm-0 text-center text-sm-start">Keep going!</span>
+                    <span id="progress-percentage" class="badge bg-success">0%</span>
+                  </div>
+                  <div class="progress" style="height: 8px;">
+                    <div id="progress-bar" 
+                         class="progress-bar bg-success progress-bar-striped progress-bar-animated" 
+                         role="progressbar" 
+                         style="width: 0%" 
+                         aria-valuenow="0" 
+                         aria-valuemin="0" 
+                         aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Stats cards -->
+                <div id="stats-cards" class="card mb-3">
+                  <div class="card-body p-2">
+                    <div class="row text-center g-2">
+                      <div class="col-12 col-sm-4 mb-2 mb-sm-0">
+                        <div class="p-2 border rounded">
+                          <div class="text-secondary small">Total</div>
+                          <div id="total-tasks" class="fw-bold">0</div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-4 mb-2 mb-sm-0">
+                        <div class="p-2 border rounded">
+                          <div class="text-success small">Completed</div>
+                          <div id="completed-tasks" class="fw-bold text-success">0</div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-4">
+                        <div class="p-2 border rounded">
+                          <div class="text-primary small">In Progress</div>
+                          <div id="pending-tasks" class="fw-bold text-primary">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <!-- todo-list -->
               <ul id="todo-list" class="list-group">
                 <!-- template to be cloned -->

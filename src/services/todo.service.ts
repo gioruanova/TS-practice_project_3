@@ -32,6 +32,21 @@ const getTodos = (): Todo[] => {
     return [...todos];
 }
 
+// get task statistics
+const getTaskStats = () => {
+    const total = todos.length;
+    const completed = todos.filter(todo => todo.done).length;
+    const pending = total - completed;
+    const completionPercentage = total ? Math.round((completed / total) * 100) : 0;
+
+    return {
+        total,
+        completed,
+        pending,
+        completionPercentage
+    };
+}
+
 // add todo
 const addTodo = (description: string): void => {
 
@@ -75,6 +90,7 @@ const deleteTodo = (id: string) => {
 
 export const todoService = {
     getTodos,
+    getTaskStats,
     addTodo,
     toggleTodo,
     deleteTodo,
